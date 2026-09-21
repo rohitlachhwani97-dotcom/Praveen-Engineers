@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- Sandbox fetch override fix -->
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var currentFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return currentFetch;
+            },
+            set: function(val) {
+              currentFetch = val;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          console.warn('Unable to redefine window.fetch setter:', e);
+        }
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Praveen Engineers | Industrial Sourcing & Global Import Partner India</title>
+    <meta name="description" content="Praveen Engineers is a leading India-based engineering sourcing, import, and business development partner. Sourcing high-quality industrial valves, pumps, bearings, castings, forgings, and steel from Germany, Italy, Japan, and European countries." />
+    <meta name="keywords" content="Praveen Engineers, Engineering Sourcing, Industrial Sourcing India, Industrial Valves Import, High-Quality Pumps India, Industrial Bearings, Steel Castings, Global Sourcing Germany, Europe Import India" />
+    <meta name="author" content="Praveen Engineers" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.praveenengineers.in" />
+    <meta property="og:title" content="Praveen Engineers | Premium Industrial Sourcing & Global Import" />
+    <meta property="og:description" content="Praveen Engineers connects international manufacturers with Indian industrial and government-sector opportunities through industrial sourcing, OEM representation, tender support, technical coordination and local liaison." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1513828583848-c25090110b82?auto=format&fit=crop&q=80&w=1200" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Praveen Engineers | Premium Industrial Sourcing" />
+    <meta property="twitter:description" content="Connecting world-class manufacturers with Indian industry for high-quality engineering components and business development support." />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1513828583848-c25090110b82?auto=format&fit=crop&q=80&w=1200" />
+
+    <!-- Favicon and Theme Color -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230B3C5D'%3E%3Cpath d='M12 2L2 22h20L12 2zm0 3.99L18.66 18H5.34L12 5.99zM11 11v4h2v-4h-2zm0-3h2v2h-2V8z'/%3E%3C/svg%3E" />
+    <meta name="theme-color" content="#0B3C5D" />
+
+    <!-- Corporate Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Praveen Engineers",
+        "url": "https://www.praveenengineers.in",
+        "logo": "https://www.praveenengineers.in/logo.png",
+        "description": "Praveen Engineers is an India-based engineering sourcing, import, and business development company committed to providing high-quality industrial products and solutions.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Hamilton Court, Airport Road, Lalghati",
+          "addressLocality": "Bhopal",
+          "addressRegion": "Madhya Pradesh",
+          "postalCode": "462030",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-79747-31954",
+          "contactType": "sales",
+          "email": "info@praveenengineers.in",
+          "areaServed": "IN"
+        },
+        "sameAs": []
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

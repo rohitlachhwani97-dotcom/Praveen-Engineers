@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #0A5230;
+  --color-brand-secondary: #063D22;
+  --color-brand-accent: #F4B400;
+  --color-brand-bg: #D5F2E2;
+  --color-brand-surface: #E8F8EE;
+  --color-brand-text: #08321D;
+  
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Poppins", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-brand-text bg-[#D5F2E2] antialiased selection:bg-brand-accent selection:text-brand-primary;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+/* Light Mint Surfaces & Cards */
+.bg-brand-surface-light {
+  background-color: #E8F8EE;
+}
+
+.bg-white {
+  background-color: #EBF8F1;
+}
+
+.bg-slate-50,
+.bg-slate-50\/70,
+.bg-slate-50\/80,
+.bg-slate-50\/50 {
+  background-color: #DEF5E8;
+}
+
+.bg-slate-100 {
+  background-color: #D2EFE0;
+}
+
+/* White font replaced with Yellow color font, turning Red when clicked (:active or clicked) */
+.text-white,
+[class*="text-white"] {
+  color: #F4B400 !important;
+  transition: color 0.15s ease-in-out;
+}
+
+.hover\:text-white:hover {
+  color: #FBBF24 !important;
+}
+
+/* When clicked / active / tapped: turns to Red (#DC2626) */
+.text-white:active,
+[class*="text-white"]:active,
+.text-white[data-clicked="true"],
+[class*="text-white"][data-clicked="true"],
+[data-clicked="true"] .text-white,
+[data-clicked="true"] [class*="text-white"],
+button:active .text-white,
+button:active [class*="text-white"],
+a:active .text-white,
+a:active [class*="text-white"],
+.hover\:text-white:active,
+[role="button"]:active .text-white,
+[role="button"]:active [class*="text-white"],
+.text-brand-accent:active,
+[class*="text-brand-accent"]:active,
+[data-clicked="true"] .text-brand-accent,
+[data-clicked="true"][class*="text-brand-accent"],
+.clicked-red,
+[data-clicked="true"] {
+  color: #DC2626 !important;
+}
+
+/* SVG icons with fill-white / text-white also follow yellow default, red on click */
+svg.fill-white,
+svg[class*="fill-white"] {
+  fill: #F4B400 !important;
+  transition: fill 0.15s ease-in-out;
+}
+
+svg.fill-white:active,
+svg[class*="fill-white"]:active,
+button:active svg.fill-white,
+a:active svg.fill-white,
+[data-clicked="true"] svg.fill-white {
+  fill: #DC2626 !important;
+}
+
+/* Specific styling for PE, PRAVEEN ENGINEERS in True Solid Red */
+.brand-red-text,
+[class*="brand-red-text"] {
+  color: #C8102E !important;
+}
+
+.brand-red-badge,
+[class*="brand-red-badge"] {
+  background-color: #C8102E !important;
+  color: #FFFFFF !important;
+  border: 1px solid #9B0D23 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #D5F2E2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2BB375;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #063D22;
+}
+
+/* Custom fade in animation on scroll */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Bulletproof Always-On Floating Quick Connect Action Buttons */
+.always-on-floating-call,
+#floating-call-container {
+  position: fixed !important;
+  bottom: 20px !important;
+  bottom: max(20px, env(safe-area-inset-bottom, 20px)) !important;
+  left: 16px !important;
+  z-index: 2147483647 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  will-change: transform !important;
+}
+
+.always-on-floating-whatsapp,
+#floating-whatsapp-container {
+  position: fixed !important;
+  bottom: 20px !important;
+  bottom: max(20px, env(safe-area-inset-bottom, 20px)) !important;
+  right: 16px !important;
+  z-index: 2147483647 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  will-change: transform !important;
+}
+
+
+
