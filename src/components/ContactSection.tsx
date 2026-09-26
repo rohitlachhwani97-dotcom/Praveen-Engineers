@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { 
   MapPin, Phone, Mail, Globe, Clock, Upload, FileText, Send, 
   CheckCircle2, ShieldCheck, X, Copy, Check, ExternalLink, ArrowRight, MessageSquare,
-  AlertTriangle, Lock, Shield 
+  AlertTriangle, Lock 
 } from 'lucide-react';
 import { EnquiryFormState } from '../types';
 import { INDUSTRIES } from '../data';
@@ -23,8 +23,7 @@ import {
 import { 
   validateAttachment, 
   sanitizeInput, 
-  isSpamSubmission, 
-  generateHumanChallenge 
+  isSpamSubmission 
 } from '../utils/security';
 
 // WhatsApp icon SVG component
@@ -56,23 +55,14 @@ export default function ContactSection({ prefilledProduct = '' }: ContactSection
   const [dispatchedChannel, setDispatchedChannel] = useState<'whatsapp' | 'email' | 'both'>('whatsapp');
   const [copied, setCopied] = useState(false);
 
-  // Security & Anti-Spam States
+  // Security & Anti-Spam States (Background Protection)
   const [fileError, setFileError] = useState<string | null>(null);
   const [honeypot, setHoneypot] = useState<string>('');
-  const [humanChallenge, setHumanChallenge] = useState(() => generateHumanChallenge());
-  const [humanAnswer, setHumanAnswer] = useState<string>('');
   const [spamWarning, setSpamWarning] = useState<string | null>(null);
   const renderTimestamp = useRef<number>(Date.now());
   
   const formRef = useRef<HTMLFormElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-
-  // Refresh anti-spam challenge
-  const refreshHumanChallenge = () => {
-    setHumanChallenge(generateHumanChallenge());
-    setHumanAnswer('');
-    setSpamWarning(null);
-  };
 
   // Get human readable industry name
   const currentIndustryName = INDUSTRIES.find(i => i.id === formData.industry)?.name || formData.industry;
@@ -157,21 +147,14 @@ export default function ContactSection({ prefilledProduct = '' }: ContactSection
       return;
     }
 
-    // 2. Anti-Spam Bot Detection (Honeypot & Submission Speed)
+    // 2. Anti-Spam Bot Detection (Invisible Honeypot & Submission Speed)
     const botCheck = isSpamSubmission(honeypot, renderTimestamp.current);
     if (botCheck.isSpam) {
       setSpamWarning('Security Alert: Automated or instantaneous bot submission detected. Please submit manually.');
       return;
     }
 
-    // 3. Human Verification Math Shield
-    const parsedAnswer = parseInt(humanAnswer.trim(), 10);
-    if (isNaN(parsedAnswer) || parsedAnswer !== humanChallenge.expectedAnswer) {
-      setSpamWarning(`Anti-Spam Verification: Please solve the security shield question correctly (${humanChallenge.question.split(': ')[1] || 'Math challenge'}) to verify you are a human engineer.`);
-      return;
-    }
-
-    // 4. Strict Sanitization against XSS & script injection
+    // 3. Strict Sanitization against XSS & script injection
     const cleanFormData: EnquiryFormState = {
       name: sanitizeInput(formData.name),
       company: sanitizeInput(formData.company),
@@ -252,8 +235,6 @@ export default function ContactSection({ prefilledProduct = '' }: ContactSection
     setFileError(null);
     setSpamWarning(null);
     setHoneypot('');
-    setHumanAnswer('');
-    setHumanChallenge(generateHumanChallenge());
     renderTimestamp.current = Date.now();
     setIsSubmitted(false);
   };
@@ -594,7 +575,7 @@ export default function ContactSection({ prefilledProduct = '' }: ContactSection
                         <div className="bg-red-50 border border-red-200 rounded-xl p-3 text-xs text-red-700 flex items-start gap-2.5">
                           <AlertTriangle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
                           <div>
-                            <span className="font-semibold block">Attachment Blocked by Security Shield</span>
+                            <span className="font-semibold block">Attachment Blocked (Security Protection)</span>
                             <p className="mt-0.5 text-[11px] text-red-600">{fileError}</p>
                           </div>
                         </div>
@@ -654,52 +635,12 @@ export default function ContactSection({ prefilledProduct = '' }: ContactSection
                       )}
                     </div>
 
-                    {/* Anti-Spam Human Verification Shield */}
-                    <div className="bg-slate-50/90 border border-slate-200 rounded-2xl p-4 space-y-2.5">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <Shield className="w-4 h-4 text-emerald-600" />
-                          <span className="text-xs font-bold text-slate-800 uppercase tracking-wide">
-                            Anti-Spam Security Shield
-                          </span>
-                        </div>
-                        <span className="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                          Verified Human
-                        </span>
-                      </div>
-                      
-                      <p className="text-xs text-slate-600">
-                        To protect against automated bot submissions, please solve: <strong className="text-brand-primary">{humanChallenge.question}</strong>
-                      </p>
-
-                      <div className="flex items-center gap-3">
-                        <input
-                          type="number"
-                          value={humanAnswer}
-                          onChange={(e) => {
-                            setHumanAnswer(e.target.value);
-                            if (spamWarning) setSpamWarning(null);
-                          }}
-                          placeholder="Your answer"
-                          required
-                          className="w-32 bg-white border border-slate-300 rounded-xl px-3 py-2 text-xs font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary"
-                        />
-                        <button
-                          type="button"
-                          onClick={refreshHumanChallenge}
-                          className="text-[11px] text-slate-500 hover:text-brand-primary underline cursor-pointer"
-                        >
-                          New Question
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Security Warning Notification */}
+                    {/* Security Warning Notification (Honeypot or Bot Rate Triggered) */}
                     {spamWarning && (
                       <div className="bg-amber-50 border border-amber-300 rounded-xl p-3 text-xs text-amber-800 flex items-start gap-2.5">
                         <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
                         <div>
-                          <span className="font-semibold block">Security Check Required</span>
+                          <span className="font-semibold block">Anti-Spam Verification</span>
                           <p className="mt-0.5 text-[11px] text-amber-700">{spamWarning}</p>
                         </div>
                       </div>

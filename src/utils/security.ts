@@ -118,20 +118,3 @@ export function isSpamSubmission(honeypotValue: string, renderTimestamp: number)
 
   return { isSpam: false };
 }
-
-/**
- * Generates an Anti-Spam Human Verification Challenge
- */
-export interface HumanChallenge {
-  question: string;
-  expectedAnswer: number;
-}
-
-export function generateHumanChallenge(): HumanChallenge {
-  const num1 = Math.floor(Math.random() * 8) + 2; // 2 to 9
-  const num2 = Math.floor(Math.random() * 8) + 1; // 1 to 8
-  return {
-    question: `Anti-Spam Security Shield: What is ${num1} + ${num2}?`,
-    expectedAnswer: num1 + num2
-  };
-}
