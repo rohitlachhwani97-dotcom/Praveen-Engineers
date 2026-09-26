@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, Phone } from 'lucide-react';
 import { ActivePage } from '../types';
+import { getGmailComposeUrl, handleEmailClick } from '../utils/email';
 
 interface HeaderProps {
   activePage: ActivePage;
@@ -265,8 +266,30 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
             >
               Request a Quote
             </button>
-            <div className="text-center text-xs text-slate-400 space-y-1">
-              <p>info@praveenengineers.in | sale@praveenengineers.in</p>
+            <div className="text-center text-xs text-slate-300 space-y-1">
+              <p className="space-x-1.5">
+                <a
+                  href={getGmailComposeUrl('info@praveenengineers.in', 'Industrial Sourcing Inquiry - Praveen Engineers')}
+                  onClick={(e) => handleEmailClick(e, 'info@praveenengineers.in', 'Industrial Sourcing Inquiry - Praveen Engineers')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-accent transition-colors underline"
+                  title="Open in Gmail"
+                >
+                  info@praveenengineers.in
+                </a>
+                <span>|</span>
+                <a
+                  href={getGmailComposeUrl('sale@praveenengineers.in', 'RFQ Purchase Enquiry - Praveen Engineers')}
+                  onClick={(e) => handleEmailClick(e, 'sale@praveenengineers.in', 'RFQ Purchase Enquiry - Praveen Engineers')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-accent transition-colors underline"
+                  title="Open in Gmail"
+                >
+                  sale@praveenengineers.in
+                </a>
+              </p>
               <p>+91 9425022518 | +91 79747 31954</p>
             </div>
           </div>

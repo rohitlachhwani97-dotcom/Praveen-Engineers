@@ -4,6 +4,12 @@ import {
   HelpCircle, ChevronDown, Search, Globe, Ship, ShieldCheck, 
   ArrowRight, Mail, Phone, RefreshCw, CheckCircle, HelpCircle as HelpIcon 
 } from 'lucide-react';
+import { ActivePage } from '../types';
+
+interface FAQSectionProps {
+  onNavigate?: (page: ActivePage) => void;
+  onRequestQuote?: () => void;
+}
 
 interface FAQItem {
   question: string;
@@ -63,7 +69,7 @@ const FAQ_ITEMS: FAQItem[] = [
   }
 ];
 
-export default function FAQSection() {
+export default function FAQSection({ onNavigate, onRequestQuote }: FAQSectionProps = {}) {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState<'all' | 'sourcing' | 'logistics' | 'quality'>('all');
   const [expandedIndex, setExpandedIndex] = useState<number | null>(0); // First item expanded by default
@@ -241,21 +247,20 @@ export default function FAQSection() {
               Our engineering team is ready to analyze your tolerances and connect you with certified overseas partners. Let's discuss your requirements.
             </p>
           </div>
-          <a
-            href="#contact"
-            onClick={(e) => {
-              // Smooth scroll to contact or direct query action
-              const contactSec = document.getElementById('contact-form');
-              if (contactSec) {
-                e.preventDefault();
-                contactSec.scrollIntoView({ behavior: 'smooth' });
+          <button
+            onClick={() => {
+              if (onNavigate) {
+                onNavigate('contact');
+              } else if (onRequestQuote) {
+                onRequestQuote();
               }
             }}
-            className="bg-brand-accent hover:bg-brand-accent/90 text-brand-primary font-display font-semibold py-3 px-6 rounded-xl text-xs uppercase tracking-wider shrink-0 transition-all active:scale-95 flex items-center gap-2 shadow-lg shadow-brand-accent/10 relative z-10"
+            id="talk-to-engineer-btn"
+            className="bg-brand-accent hover:bg-brand-accent/90 text-brand-primary font-display font-semibold py-3 px-6 rounded-xl text-xs uppercase tracking-wider shrink-0 transition-all active:scale-95 flex items-center gap-2 shadow-lg shadow-brand-accent/10 relative z-10 cursor-pointer"
           >
             <span>Talk to an Engineer</span>
             <ArrowRight className="w-3.5 h-3.5" />
-          </a>
+          </button>
         </div>
 
       </div>

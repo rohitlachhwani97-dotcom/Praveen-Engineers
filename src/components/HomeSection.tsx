@@ -371,7 +371,7 @@ export default function HomeSection({ onNavigate, onRequestQuote }: HomeSectionP
       </section>
 
       {/* Frequently Asked Questions */}
-      <FAQSection />
+      <FAQSection onNavigate={onNavigate} onRequestQuote={onRequestQuote} />
 
       {/* 7. COLLABORATIVE FOOTER CTA */}
       <section className="bg-gradient-to-br from-brand-secondary to-brand-primary text-white py-16 px-4">

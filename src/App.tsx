@@ -14,6 +14,7 @@ import ClientsSection from './components/ClientsSection';
 import GlobalSourcingSection from './components/GlobalSourcingSection';
 import ContactSection from './components/ContactSection';
 import FooterContactDesk from './components/FooterContactDesk';
+import LegalModal, { LegalModalType } from './components/LegalModal';
 
 export default function App() {
   const [activePage, setActivePage] = useState<ActivePage>('home');
@@ -21,6 +22,13 @@ export default function App() {
   const [showBackToTop, setShowBackToTop] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [loadingProgress, setLoadingProgress] = useState<number>(0);
+  const [isLegalModalOpen, setIsLegalModalOpen] = useState<boolean>(false);
+  const [legalModalType, setLegalModalType] = useState<LegalModalType>('privacy');
+
+  const handleOpenLegalModal = (type: LegalModalType) => {
+    setLegalModalType(type);
+    setIsLegalModalOpen(true);
+  };
 
   // 1. Initial Loading Animation Progress simulation
   useEffect(() => {
@@ -219,6 +227,15 @@ export default function App() {
         activePage={activePage}
         setActivePage={setActivePage}
         onBackToTop={scrollToTop}
+        onOpenLegalModal={handleOpenLegalModal}
+      />
+
+      {/* LEGAL MODAL (Privacy Policy & Terms of Sourcing) */}
+      <LegalModal
+        isOpen={isLegalModalOpen}
+        onClose={() => setIsLegalModalOpen(false)}
+        type={legalModalType}
+        setType={setLegalModalType}
       />
 
       {/* E. FLOATING INTERACTIVE UTILITIES */}

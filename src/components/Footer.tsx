@@ -1,14 +1,16 @@
 import { Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
 import { ActivePage } from '../types';
 import FooterContactDesk from './FooterContactDesk';
+import { getGmailComposeUrl, handleEmailClick } from '../utils/email';
 
 interface FooterProps {
   activePage: ActivePage;
   setActivePage: (page: ActivePage) => void;
   onBackToTop: () => void;
+  onOpenLegalModal: (type: 'privacy' | 'terms') => void;
 }
 
-export default function Footer({ activePage, setActivePage, onBackToTop }: FooterProps) {
+export default function Footer({ activePage, setActivePage, onBackToTop, onOpenLegalModal }: FooterProps) {
   const quickLinks: { id: ActivePage; label: string }[] = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About Us' },
@@ -124,8 +126,26 @@ export default function Footer({ activePage, setActivePage, onBackToTop }: Foote
             <li className="flex items-start gap-2.5">
               <Mail className="w-4 h-4 text-brand-accent shrink-0 mt-0.5" />
               <div className="flex flex-col gap-0.5">
-                <a href="mailto:info@praveenengineers.in" className="hover:text-brand-accent transition-colors">info@praveenengineers.in</a>
-                <a href="mailto:sale@praveenengineers.in" className="hover:text-brand-accent transition-colors">sale@praveenengineers.in</a>
+                <a
+                  href={getGmailComposeUrl('info@praveenengineers.in', 'Industrial Sourcing Inquiry - Praveen Engineers')}
+                  onClick={(e) => handleEmailClick(e, 'info@praveenengineers.in', 'Industrial Sourcing Inquiry - Praveen Engineers')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-accent transition-colors"
+                  title="Open directly in Gmail"
+                >
+                  info@praveenengineers.in
+                </a>
+                <a
+                  href={getGmailComposeUrl('sale@praveenengineers.in', 'RFQ Purchase Enquiry - Praveen Engineers')}
+                  onClick={(e) => handleEmailClick(e, 'sale@praveenengineers.in', 'RFQ Purchase Enquiry - Praveen Engineers')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-brand-accent transition-colors"
+                  title="Open directly in Gmail"
+                >
+                  sale@praveenengineers.in
+                </a>
               </div>
             </li>
           </ul>
@@ -139,8 +159,20 @@ export default function Footer({ activePage, setActivePage, onBackToTop }: Foote
           © 2026 Praveen Engineers. All rights reserved under legal copyright act.
         </div>
         <div className="flex items-center gap-6">
-          <span className="hover:text-brand-accent cursor-pointer transition-colors">Privacy Policy</span>
-          <span className="hover:text-brand-accent cursor-pointer transition-colors">Terms of Sourcing</span>
+          <button
+            onClick={() => onOpenLegalModal('privacy')}
+            className="hover:text-brand-accent transition-colors cursor-pointer text-xs focus:outline-none"
+            id="footer-privacy-btn"
+          >
+            Privacy Policy
+          </button>
+          <button
+            onClick={() => onOpenLegalModal('terms')}
+            className="hover:text-brand-accent transition-colors cursor-pointer text-xs focus:outline-none"
+            id="footer-terms-btn"
+          >
+            Terms of Sourcing
+          </button>
           <button
             onClick={onBackToTop}
             className="flex items-center gap-1 bg-slate-800 hover:bg-brand-accent hover:text-brand-primary px-3 py-1.5 rounded-lg text-[10px] text-slate-400 uppercase tracking-widest font-semibold font-mono border border-slate-700/60 transition-colors"
