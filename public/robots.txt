@@ -1,0 +1,40 @@
+# Robots.txt for Praveen Engineers (https://www.praveenengineers.in)
+# Configured for standard search engines and AI Chatbots (ChatGPT, Google Gemini, Claude, Perplexity)
+
+User-agent: *
+Allow: /
+
+# OpenAI / ChatGPT Bots (SearchGPT & ChatGPT Browsing)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google Gemini & Search (Google Search Grounding)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic Claude Bots
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI Bot
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft Bing & Copilot
+User-agent: Bingbot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.praveenengineers.in/sitemap.xml
