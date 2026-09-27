@@ -62,7 +62,7 @@ export default function HomeSection({ onNavigate, onRequestQuote }: HomeSectionP
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-brand-primary tracking-tight leading-tight"
               >
-                Industrial Sourcing &amp; <span className="text-brand-secondary underline decoration-brand-accent decoration-4 underline-offset-4">Global OEM Representation</span> in India
+                Engineering Excellence with <span className="text-brand-secondary underline decoration-brand-accent decoration-4 underline-offset-4">Global Sourcing Expertise</span>
               </motion.h1>
 
               <motion.p
@@ -71,7 +71,7 @@ export default function HomeSection({ onNavigate, onRequestQuote }: HomeSectionP
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-slate-700 text-lg sm:text-xl max-w-2xl leading-relaxed font-sans font-medium"
               >
-                Praveen Engineers connects international manufacturers with Indian industrial and government-sector opportunities through industrial sourcing, OEM representation, tender support, technical coordination and local liaison.
+                Praveen Engineers connects international manufacturers and OEMs with opportunities across the public, industrial, and government sectors in India and the Indian subcontinent, while assisting Indian clients in sourcing the right products and solutions from global manufacturers.
               </motion.p>
 
               {/* Action Buttons */}
