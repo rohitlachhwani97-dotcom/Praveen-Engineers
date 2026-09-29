@@ -27,7 +27,7 @@ export default function Header({ activePage, setActivePage, onRequestQuote }: He
 
   const navItems: { id: ActivePage; label: string }[] = [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
+    { id: 'about', label: 'About Us' },
     { id: 'products', label: 'Products' },
     { id: 'industries', label: 'Industries' },
     { id: 'clients', label: 'Clients' },

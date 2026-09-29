@@ -62,7 +62,7 @@ export default function HomeSection({ onNavigate, onRequestQuote }: HomeSectionP
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-brand-primary tracking-tight leading-tight"
               >
-                Engineering Excellence with <span className="text-brand-secondary underline decoration-brand-accent decoration-4 underline-offset-4">Global Sourcing Expertise</span>
+                Engineering Excellence with <span className="text-brand-secondary">Global Sourcing Expertise</span>
               </motion.h1>
 
               <motion.p
@@ -183,7 +183,7 @@ export default function HomeSection({ onNavigate, onRequestQuote }: HomeSectionP
                   Established in India
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-display font-bold text-brand-primary tracking-tight">
-                  About Praveen Engineers
+                  Our Global Presence
                 </h2>
               </div>
 
