@@ -3,6 +3,7 @@ import Counter from './Counter';
 
 const PRODUCT_SUPPLY_ITEMS = [
   'Carbon Steel (CS), Stainless Steel (SS), Alloy Steel, and Special Steel Plates',
+  'CRGO & CRNGO Silicon Steel Sheets',
   'Open Die Forgings',
   'Closed Die Forgings',
   'Forged Shafts',
@@ -77,7 +78,7 @@ export default function ProductsSection({ onRequestQuoteWithProduct }: ProductsS
             <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
               <div className="bg-slate-50 px-3.5 py-1.5 rounded-full border border-slate-200 text-xs font-semibold text-slate-700">
                 <span className="text-brand-primary font-bold mr-1">
-                  <Counter value="39+" duration={1800} />
+                  <Counter value="40+" duration={1800} />
                 </span>
                 Critical Components
               </div>

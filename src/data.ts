@@ -57,6 +57,7 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     icon: 'Layers',
     description: 'Certified, raw, and prefabricated structural steel products engineered for critical heavy fabrication.',
     items: [
+      'CRGO & CRNGO Silicon Steel Sheets',
       'Stainless Steel Plates',
       'Carbon Steel Plates',
       'Alloy Steel Plates',

@@ -77,6 +77,7 @@ export default function Footer({ activePage, setActivePage, onBackToTop, onOpenL
             <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">Industrial Bearings</button></li>
             <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">Forgings & Castings</button></li>
             <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">Steel Plates</button></li>
+            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">CRGO & CRNGO Steel Sheets</button></li>
             <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">PTFE Lined Bearing Pads</button></li>
             <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">Cooling Tubes</button></li>
           </ul>
