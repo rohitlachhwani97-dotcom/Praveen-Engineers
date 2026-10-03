@@ -6,16 +6,15 @@ import Counter from './Counter';
 
 const CAPABILITIES = [
   'Global sourcing of heavy engineering products and critical industrial components',
-  'Import and supply of custom-manufactured products',
   'Procurement as per customer drawings, specifications, and international standards',
   'Supply of large forgings, castings, shafts, bearings, and precision-machined components',
   'Reverse engineering and manufacturing support',
   'Third-Party Inspection (TPI) coordination',
-  'Material Test Certificates (EN 10204 3.1 / 3.2) and complete quality documentation',
+  'Material Test Certificates and complete quality documentation',
   'Export-standard packaging and international logistics',
   'Import customs clearance and delivery coordination',
   'Technical support throughout procurement and project execution',
-  'Reliable sourcing solutions for greenfield, expansion, modernization, and refurbishment projects.',
+  'Reliable sourcing solutions for greenfield, expansion, modernization, and refurbishment projects',
 ];
 
 export default function AboutSection() {
@@ -89,19 +88,19 @@ export default function AboutSection() {
                   Corporate History & Expertise
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-brand-primary tracking-tight">
-                  India's Dedicated Technical Liaison & Sourcing Firm
+                  <strong>Technical Liaison & Global Product Sourcing Partner</strong>
                 </h2>
               </div>
 
               <div className="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
                 <p>
-                  <strong>Praveen Engineers</strong> specializes in the global sourcing, import, and supply of heavy engineering equipment, forgings, castings, bearings, precision-machined components, and industrial materials for hydroelectric, thermal, nuclear, steel, mining, cement, oil & gas, marine, and other critical infrastructure sectors.
+                  <strong>Praveen Engineers</strong> specializes in global product sourcing, import, and supply of heavy engineering equipment, components, forgings, castings, bearings, precision-machined components, and critical industrial materials for hydroelectric, thermal, nuclear, steel, mining, cement, oil & gas, marine, and other infrastructure sectors.
                 </p>
                 <p>
-                  Leveraging an extensive international sourcing network, we supply products manufactured in accordance with customer specifications and internationally recognized quality standards.
+                  With an extensive international sourcing network, we connect Indian industries and project requirements with qualified overseas manufacturers and OEMs. Products are sourced and manufactured in accordance with customer drawings, technical specifications, applicable international standards, and project-specific quality requirements.
                 </p>
                 <p>
-                  Praveen Engineers is committed to delivering reliable, cost-effective, and high-quality engineering solutions through a robust global sourcing network, ensuring timely delivery and dependable performance for mission-critical industrial applications.
+                  Our expertise combines technical coordination, international sourcing, manufacturer liaison, quality coordination, inspection, logistics, and import support to provide reliable and cost-effective procurement solutions for critical industrial applications.
                 </p>
 
                 {/* Our Capabilities List */}

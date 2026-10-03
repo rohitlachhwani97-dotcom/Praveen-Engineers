@@ -62,7 +62,7 @@ export default function HomeSection({ onNavigate, onRequestQuote }: HomeSectionP
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-brand-primary tracking-tight leading-tight"
               >
-                Engineering Excellence with <span className="text-brand-secondary">Global Sourcing Expertise</span>
+                Global Industrial Product Sourcing & <span className="text-brand-secondary">Engineering Solutions</span>
               </motion.h1>
 
               <motion.p
@@ -109,33 +109,33 @@ export default function HomeSection({ onNavigate, onRequestQuote }: HomeSectionP
                 <div className="absolute top-0 right-0 w-32 h-32 bg-brand-accent/10 rounded-full blur-2xl pointer-events-none" />
                 <h3 className="font-display font-bold text-brand-primary text-lg mb-4 flex items-center gap-2">
                   <span className="w-1.5 h-6 bg-brand-primary rounded-full inline-block" />
-                  Technical Auditing
+                  Technical Auditing & Quality Assurance
                 </h3>
                 <ul className="space-y-3.5 text-sm text-slate-700 font-medium">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-5 h-5 text-brand-primary shrink-0 mt-0.5" />
-                    <span>Drawing-to-sample verification</span>
+                    <span>Drawing-to-Sample Verification</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-5 h-5 text-brand-primary shrink-0 mt-0.5" />
-                    <span>ASTM/ASME/BIS/DIN/EN/JIS/AFNOR Grades at home</span>
+                    <span>ASTM / ASME / BIS / DIN / EN / JIS / AFNOR Standards</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-5 h-5 text-brand-primary shrink-0 mt-0.5" />
                     <div>
                       <span className="font-semibold text-slate-800 block">Third-Party Inspection & Certification</span>
                       <span className="text-[11px] sm:text-xs text-slate-500 font-mono block mt-0.5 leading-snug">
-                        TÜV SÜD | SGS | Lloyd’s Register | Other Accredited Agencies
+                        TÜV SÜD | SGS | Lloyd’s Register | Accredited Agencies
                       </span>
                     </div>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-5 h-5 text-brand-primary shrink-0 mt-0.5" />
-                    <span>Complete import logistics & clearance</span>
+                    <span>Import Logistics & Customs Clearance</span>
                   </li>
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-5 h-5 text-brand-primary shrink-0 mt-0.5" />
-                    <span>Tender participation & support</span>
+                    <span>Tender Participation & Technical Support</span>
                   </li>
                 </ul>
               </motion.div>
@@ -294,7 +294,7 @@ export default function HomeSection({ onNavigate, onRequestQuote }: HomeSectionP
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {PRODUCT_CATEGORIES.slice(0, 3).map((cat) => (
+            {PRODUCT_CATEGORIES.slice(0, 6).map((cat) => (
               <motion.div
                 key={cat.id}
                 whileHover={{ y: -4 }}

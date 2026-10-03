@@ -32,14 +32,14 @@ export default function GlobalSourcingSection({ onRequestQuote }: GlobalSourcing
                 Bridging Continents
               </span>
               <h2 className="text-2xl sm:text-3xl font-display font-bold text-brand-primary tracking-tight">
-                Your Direct Conduit to Certified Overseas Engineering
+                Your Direct Link to Global Engineering Manufacturers and OEMs
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
                 <p>
-                  Industrial procurement is no longer restricted by local boundaries. However, language barriers, timezone disparities, varying engineering codes (DIN, ASME, JIS), and complex customs rules make direct importing extremely tedious for Indian buyers.
+                  Industrial procurement increasingly extends beyond national boundaries. However, differences in language, time zones, engineering standards, technical specifications, documentation, and import procedures can make international sourcing complex for Indian buyers.
                 </p>
                 <p>
-                  <strong>Praveen Engineers</strong> solves this by acting as your dedicated sourcing agent. We maintain active liaison networks and strong commercial contracts with approved, certified manufacturers across major industrial nations:
+                  <strong>Praveen Engineers</strong> helps simplify this process by serving as a dedicated technical sourcing and business liaison partner between Indian customers and overseas manufacturers. We develop and maintain relationships with established manufacturers and suppliers across major industrial markets, including:
                 </p>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5 text-xs sm:text-sm text-brand-primary font-bold mt-4 bg-white p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-sm">
                   <li className="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-xl border border-slate-200/60">
@@ -80,11 +80,14 @@ export default function GlobalSourcingSection({ onRequestQuote }: GlobalSourcing
                   </li>
                   <li className="flex items-center gap-2 bg-slate-50 px-3 py-2 rounded-xl border border-slate-200/60">
                     <span className="w-2 h-2 rounded-full bg-brand-accent shrink-0" />
-                    <span>Europe</span>
+                    <span>Other European Markets</span>
                   </li>
                 </ul>
                 <p className="pt-2">
-                  Our service takes care of the entire lifecycle: from translating local drawings to matching overseas vendor lists, coordinating third-party inspections at origin, consolidating freight in sea containers, customs clearance, and road transport directly to your assembly bays in India.
+                  Our support can extend across the complete sourcing cycle—from understanding customer drawings and specifications and identifying suitable overseas manufacturers to technical and commercial coordination, quality documentation, third-party inspection coordination, export logistics, customs clearance, and delivery coordination in India.
+                </p>
+                <p>
+                  Through this integrated approach, Praveen Engineers helps Indian industries access international products, technologies, and manufacturing capabilities with greater ease, transparency, and technical coordination.
                 </p>
               </div>
             </div>

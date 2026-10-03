@@ -2,164 +2,107 @@ import { ProductCategory, IndustryItem, ClientItem, SourcingCountry } from './ty
 
 export const PRODUCT_CATEGORIES: ProductCategory[] = [
   {
-    id: 'valves',
-    title: 'Industrial Valves',
-    icon: 'Settings2',
-    description: 'High-performance flow control and isolation valves engineered for high pressure, temperature, and corrosive services.',
-    items: [
-      'Solenoid Valves',
-      'Control Valves',
-      'Safety Relief Valves',
-      'Pressure Reducing Valves',
-      'Globe Valves',
-      'Gate Valves',
-      'Ball Valves',
-      'Butterfly Valves',
-      'Check Valves',
-      'Plug Valves',
-      'Knife Gate Valves',
-      'Instrumentation Valves',
-      'Pneumatic & Electric Actuated Valves'
-    ]
-  },
-  {
-    id: 'pumps',
-    title: 'Pumps & Spares',
-    icon: 'Droplets',
-    description: 'Robust fluid-transfer systems designed for heavy-duty industrial processing and continuous operations.',
-    items: [
-      'Vacuum Pumps',
-      'Centrifugal Pumps',
-      'Rotary Pumps',
-      'Screw Pumps',
-      'Gear Pumps',
-      'Diaphragm Pumps',
-      'Pump Spares'
-    ]
-  },
-  {
-    id: 'bearings',
-    title: 'Industrial Bearings',
-    icon: 'Activity',
-    description: 'Precision anti-friction bearings designed for extremely high loads, speeds, and long service life.',
-    items: [
-      'Ball Bearings',
-      'Roller Bearings',
-      'PTFE Bearings',
-      'Journal Bearings',
-      'Split Bearings',
-      'Thrust Bearings'
-    ]
-  },
-  {
-    id: 'steel',
-    title: 'Steel Products',
-    icon: 'Layers',
-    description: 'Certified, raw, and prefabricated structural steel products engineered for critical heavy fabrication.',
-    items: [
-      'CRGO & CRNGO Silicon Steel Sheets',
-      'Stainless Steel Plates',
-      'Carbon Steel Plates',
-      'Alloy Steel Plates',
-      'Wear Resistant Plates',
-      'Boiler Plates',
-      'Pipes',
-      'Tubes',
-      'Bars',
-      'Rods'
-    ]
-  },
-  {
-    id: 'forgings',
-    title: 'Forgings',
+    id: 'power-sector-forgings',
+    title: 'Power Sector Forgings',
     icon: 'Hammer',
-    description: 'Custom open-die and closed-die forged heavy components for high tensile strength and load applications.',
+    description: 'High-integrity open and closed die forgings, forged shafts, rings, discs, sleeves, and cylinders engineered for severe power equipment applications.',
     items: [
-      'Ring Forgings',
-      'Shafts',
-      'Flanges',
-      'Bushes',
+      'Open die forgings',
+      'Closed die forgings',
+      'Forged shafts',
+      'Rings',
       'Discs',
-      'Forged Blocks'
+      'Sleeves',
+      'Cylinders'
     ]
   },
   {
-    id: 'castings',
-    title: 'Castings',
-    icon: 'Flame',
-    description: 'Precisely cast heavy components with rigorous quality testing including UT, RT, and MPI.',
+    id: 'turbine-generator-shafts',
+    title: 'Turbine & Generator Shafts',
+    icon: 'Disc',
+    description: 'Precision engineered shafts meeting stringent dimensional tolerances and non-destructive examination standards.',
     items: [
-      'Steel Castings',
-      'Stainless Steel Castings',
-      'Alloy Steel Castings',
-      'Iron Castings',
-      'Investment Castings',
-      'Sand Castings'
+      'Hydro turbine shafts',
+      'Generator shafts',
+      'Rotor shafts',
+      'Steam turbine shafts',
+      'Roll shafts',
+      'Crankshafts'
     ]
   },
   {
-    id: 'power',
+    id: 'heavy-steel-castings-machined-components',
+    title: 'Heavy Steel Castings & Machined Components',
+    icon: 'Flame',
+    description: 'Heavy castings, precision machining, and fabricated components manufactured to client specifications and international codes.',
+    items: [
+      'Heavy castings',
+      'Precision machining',
+      'Fabricated components'
+    ]
+  },
+  {
+    id: 'power-plant-components',
     title: 'Power Plant Components',
     icon: 'Zap',
-    description: 'Technical equipment and high-integrity replacement spares matching OEM standards for thermal & hydro systems.',
+    description: 'Critical high-reliability parts for power plant installations, generation infrastructure, and industrial pressure systems.',
     items: [
-      'Turbine Components',
-      'Boiler Components',
-      'Heat Exchanger Parts',
-      'Expansion Joints',
-      'Mechanical Seals'
+      'Hydro-generator components',
+      'Steam-turbine components',
+      'Pressure-vessel components'
     ]
   },
   {
-    id: 'automation',
-    title: 'Industrial Automation',
-    icon: 'Cpu',
-    description: 'Smart sensors and electronic/pneumatic transmitters for industrial process safety and control loops.',
+    id: 'industrial-valves',
+    title: 'Industrial Valves',
+    icon: 'Settings2',
+    description: 'Heavy-duty valve bodies, critical industrial valves, and engineered special valves for high-pressure fluid control.',
     items: [
-      'Sensors',
-      'Solenoid Coils',
-      'Pressure Switches',
-      'Temperature Switches',
-      'Flow Switches',
-      'Position Indicators'
+      'Valve bodies',
+      'Industrial valves',
+      'Special valves'
     ]
   },
   {
-    id: 'components',
-    title: 'Engineering Components',
-    icon: 'Wrench',
-    description: 'Tailor-made, high-precision machined components built exactly to custom engineering drawings and tolerances.',
+    id: 'power-generation-bearings',
+    title: 'Power Generation Bearings',
+    icon: 'ShieldCheck',
+    description: 'Specialized bearing solutions including PTFE thrust pads, guide pads, Babbitt bearing pads, and full bearing assemblies for power plants.',
     items: [
-      'CNC Machined Components',
-      'Fabricated Components',
-      'Precision Parts',
-      'Custom Manufacturing'
+      'PTFE thrust pads',
+      'Guide bearing pads',
+      'Babbitt bearing pads',
+      'Thrust bearings',
+      'Guide bearings'
     ]
   },
   {
-    id: 'raw-materials',
-    title: 'Raw Materials',
-    icon: 'Database',
-    description: 'Technical grade raw stock, specialized engineering plastics, and complex high-performance metallic alloys.',
+    id: 'industrial-bearings-critical-spares',
+    title: 'Industrial Bearings & Critical Spares',
+    icon: 'CircleDot',
+    description: 'Comprehensive range of spherical, cylindrical, tapered, slewing, rolling-mill, and custom large-diameter industrial bearings.',
     items: [
-      'Engineering Plastics',
-      'PTFE Products',
-      'Industrial Metals',
-      'Copper Alloys',
-      'Nickel Alloys',
-      'Bronze Components'
+      'Spherical bearings',
+      'Cylindrical bearings',
+      'Tapered bearings',
+      'Deep-groove bearings',
+      'Rolling-mill bearings',
+      'Slewing bearings',
+      'Large-diameter and custom bearings'
     ]
   },
   {
-    id: 'custom-sourcing',
-    title: 'Custom Sourcing',
-    icon: 'Search',
-    description: 'Bespoke procurement and vendor matching services for rare, legacy, or highly specialized industrial spares.',
+    id: 'heavy-steel-plates',
+    title: 'Heavy Steel Plates',
+    icon: 'Layers',
+    description: 'Heavy plates in carbon steel, alloy steel, stainless steel, boiler quality, and high-strength grades with full mill test certificates.',
     items: [
-      'Hard-to-find Spares Sourcing',
-      'Reverse Engineering Support',
-      'Custom Alloy Sourcing',
-      'European Technical Procurement'
+      'Carbon Steel Heavy Plates',
+      'Alloy Steel Heavy Plates',
+      'Stainless Steel Heavy Plates',
+      'Special Steel Plates',
+      'Pressure Vessel & Boiler Plates',
+      'High-Strength Plates'
     ]
   }
 ];
@@ -336,7 +279,7 @@ export const SOURCING_COUNTRIES: SourcingCountry[] = [
     shippingMode: 'Both'
   },
   {
-    name: 'Europe',
+    name: 'Other European Markets',
     flag: 'EU',
     description: 'Consolidated procurement hubs across 15+ European states for specialized, rare, and legacy OEM equipment replacements.',
     coordinates: { x: 47.0, y: 32.0 },
@@ -366,7 +309,7 @@ export const CORE_VALUES = [
   {
     title: 'Vision',
     icon: 'Compass',
-    text: 'To become one of India\'s most trusted engineering sourcing and international business development companies.'
+    text: 'To build Praveen Engineers into a trusted global critical product sourcing and international business development partner, providing Indian industries with easy access to qualified overseas manufacturers and OEMs.'
   },
   {
     title: 'Values',

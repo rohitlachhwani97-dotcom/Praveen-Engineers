@@ -72,14 +72,14 @@ export default function Footer({ activePage, setActivePage, onBackToTop, onOpenL
             Our Products
           </h4>
           <ul className="space-y-2.5 text-xs text-slate-400">
-            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">Industrial Valves</button></li>
-            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">Heavy Pumps</button></li>
-            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">Industrial Bearings</button></li>
-            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">Forgings & Castings</button></li>
-            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">Steel Plates</button></li>
-            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">CRGO & CRNGO Steel Sheets</button></li>
-            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">PTFE Lined Bearing Pads</button></li>
-            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent">Cooling Tubes</button></li>
+            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent text-left">Power Sector Forgings</button></li>
+            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent text-left">Turbine & Generator Shafts</button></li>
+            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent text-left">Heavy Steel Castings</button></li>
+            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent text-left">Power Plant Components</button></li>
+            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent text-left">Industrial Valves</button></li>
+            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent text-left">Power Generation Bearings</button></li>
+            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent text-left">Industrial Bearings & Spares</button></li>
+            <li><button onClick={() => handleNavClick('products')} className="hover:text-brand-accent text-left">Heavy Steel Plates</button></li>
           </ul>
         </div>
 

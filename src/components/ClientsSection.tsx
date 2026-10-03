@@ -49,10 +49,10 @@ export default function ClientsSection() {
                 Trusted by India's Leading Industrial Organizations
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                Praveen Engineers has built an outstanding reputation as a reliable supplier and liaison agent to India's major public sector undertakings (PSUs) and multi-billion dollar private conglomerates. We participate actively in technical tender processes, clear multi-layered qualification criteria, and successfully execute long-term rate contracts.
+                Praveen Engineers has built an outstanding reputation as a reliable supplier and liaison agent, sourcing critical products and components from overseas for India's major public sector undertakings (PSUs) and multi-billion-dollar private conglomerates. We actively participate in technical tender processes on behalf of OEMs, navigate multi-layered qualification criteria, and successfully execute long-term rate contracts.
               </p>
               <p className="text-slate-600 leading-relaxed text-sm sm:text-base">
-                Our team handles the complex commercial terms, custom clearance paperwork, and technical drawings approval cycles that are mandatory when working with large-scale players such as <strong>BHEL, NTPC, ONGC, SAIL, NHPC</strong>, and <strong>Larsen & Toubro</strong>.
+                Our team handles complex commercial terms, customs clearance and invoice documentation and follow-ups as per NITs, as well as technical drawing approval cycles that are mandatory when working with large-scale organizations such as <strong>BHEL, NTPC, ONGC, SAIL, NHPC</strong>, and <strong>Larsen & Toubro</strong>.
               </p>
 
               {/* Animated Counters */}
@@ -145,9 +145,9 @@ export default function ClientsSection() {
       <section className="bg-brand-primary text-white py-16 px-4 text-center">
         <div className="max-w-3xl mx-auto space-y-4">
           <Award className="w-10 h-10 text-brand-accent mx-auto" />
-          <h2 className="text-xl sm:text-2xl font-display font-bold">Uncompromising Quality Compliance</h2>
+          <h2 className="text-xl sm:text-2xl font-display font-bold">Commitment to Quality & Compliance</h2>
           <p className="text-slate-300 text-sm leading-relaxed italic">
-            "Operating with public sectors requires more than just commercial readiness. It demands flawless compliance, rigorous documentation, zero-tolerance technical standards, and on-schedule logistic executions. Praveen Engineers takes absolute pride in maintaining this high standard."
+            "Working with public-sector organizations and critical infrastructure projects requires a high level of technical diligence, documentation, compliance, and coordination. At Praveen Engineers, we place strong emphasis on understanding project requirements, maintaining appropriate quality documentation, coordinating inspections, and supporting timely execution. Our approach is guided by professionalism, transparency, and a commitment to delivering reliable sourcing solutions to our customers and partners."
           </p>
           <div className="text-brand-accent font-mono text-xs uppercase tracking-wider pt-2 font-bold">
             — Management, Praveen Engineers
